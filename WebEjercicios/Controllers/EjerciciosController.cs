@@ -27,5 +27,17 @@ namespace WebEjercicios.Controllers
         {
             return View();
         }
+        public ActionResult Listas()
+        {
+            return View();
+        }
+        public ActionResult Tablas1()
+        {
+            return View();
+        }
+        public ActionResult Tablas2()
+        {
+            return View();
+        }
     }
 }
