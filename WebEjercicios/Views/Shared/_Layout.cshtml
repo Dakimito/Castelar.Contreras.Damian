@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - UAI</title>
+    <link href="~/Content/site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- Cabecera -->
+        <header>
+            <a href="/" title="Principal">
+                <img class="logo" src="~/content/img/Logo UAI.png" alt="Logo de la Institución" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/Home/Index.cshtml">Principal</a> </li>
+                    <li><a href="/Home/Index.cshtml">Contacto</a> </li>
+                    <li><a href="/Home/Index.cshtml">Acerca de</a> </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Contenido -->
+        <section>
+            <article>
+                @RenderBody()
+            </article>
+        </section>
+
+        <!-- Contenido relacionado-->
+        <aside id="pub">
+            <article>
+                <div>
+                    <h3>Menu</h3>
+                    <div>
+                        <ul>
+                            <li><a href="/Ejercicios/ConceptosB1.cshtml">Conceptos Basicos 1</a> </li>
+                            <li><a href="/Ejercicios/ConceptosB2.cshtml">Conceptos Basicos 2</a> </li>
+                            <li><a href="/Ejercicios/ConceptosB3.cshtml">Conceptos Basicos 3</a> </li>
+                            <li><a href="/Ejercicios/Enlaces.cshtml">Enlaces</a> </li>
+                            <li><a href="/Ejercicios/Listas.cshtml">Listas</a> </li>
+                            <li><a href="/Ejercicios/Tablas1.cshtml">Tablas 1</a> </li>
+                            <li><a href="/Ejercicios/Tablas2.cshtml">Tablas 2</a> </li>
+                            <li><a href="/Ejercicios/Formularios1.cshtml">Formularios 1</a> </li>
+                            <li><a href="/Ejercicios/Formularios2.cshtml">Formularios 2</a> </li>
+                            <li><a href="/Ejercicios/FormulariosHTML5.cshtml">Formularios HTML5</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </aside>
+        <!-- Pie de pagina -->
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Universidad Abierta Interamericana</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
